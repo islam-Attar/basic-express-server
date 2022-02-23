@@ -5,7 +5,7 @@ const request = supertest(server.app);
 
 describe("server", () => {
   test("get status 404 for bad method ", async () => {
-    const response = await request.post("/person");
+    const response = await request.get("/wrongRoute");
     expect(response.status).toBe(404);
   });
 
